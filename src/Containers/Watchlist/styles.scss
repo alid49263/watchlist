@@ -1,0 +1,99 @@
+.app-container {
+
+    .watchlist-name-continer {
+        display: flex;
+        border-bottom: 1px solid #eee;
+        padding: 0px 10px;
+        align-items: center;
+
+        .watchlist-name {
+            padding: 12px 5px;
+            width: 150px;
+            overflow: hidden;
+            text-align: center;
+            text-overflow: ellipsis;
+            font-size: 17px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+
+            &.active, &:hover {
+                color: #3861fb;
+                font-weight: 600;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    height: 5px;
+                    width: 100%;
+                    background: #3861fb;
+                    bottom: 0px;
+                    left: 0px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                }
+            }
+        }
+        .add-button{
+            background-color: #3861fb;
+            border-radius: 2px;
+            color: #fff;
+            font-weight: 600;
+            width: 40px;
+            height: 35px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            cursor: pointer;
+            span{
+                font-size: 20px;
+            }
+            &:hover{
+                background-color: #3861fb;
+                color: #fff;
+            }
+        }
+    }
+
+    .watchlist-data-container {
+        padding: 15px;
+    }
+
+    .modalContent{
+        height: 150px;
+        min-height: unset;
+        .watchlist-add{
+            .watchlist-label{
+                font-weight: 600;
+                opacity: 0.7;
+            }
+            .watchlist-input{
+                border-radius: 3px;
+                border: 1px solid #eee;
+                width: 100%;
+                height: 35px;
+                padding: 0px 10px;
+                outline: none;
+                margin-top: 10px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .btn{
+        padding: 7px 10px;
+        border: none;
+        background-color: #fff;
+        border: 1px solid #3861fb;
+        color: #3861fb;
+        border-radius: 3px;
+        font-weight: 600;
+        cursor: pointer;
+        &.primary{
+            background: #3861fb;
+            color: #fff;
+        }
+    }
+}

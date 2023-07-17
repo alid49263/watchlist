@@ -1,0 +1,65 @@
+.search-container {
+    width: 350px;
+
+    .css-1jqq78o-placeholder {
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    .css-13cymwt-control {
+        border-color: #eee;
+        outline: none;
+        &:hover{
+            border-color: #eee;
+        }
+    }
+
+    .option-container {
+        box-sizing: border-box !important;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .thumb-image {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+
+        .option-symbol {
+            font-weight: 500;
+            color: rgb(128, 138, 157);
+        }
+
+        .option-name {
+            font-weight: 600;
+            margin-right: 5px;
+            font-size: 14px;
+        }
+    }
+
+    .button {
+        display: none;
+        cursor: pointer;
+    }
+
+    .option-container:hover .button {
+        display: block;
+        margin-left: auto;
+        padding: 3px 10px;
+        border-radius: 3px;
+        border: 1px solid #4caf50;
+        background: #4caf50;
+        font-weight: 400;
+        font-size: .825rem;
+        color: #fff;
+        display: inline-block;
+        font-weight: 600;
+        transition: 0.1s ease-in;
+        &.remove{
+            border: 1px solid #ea3943;
+            background: #ea3943;
+        }
+    }
+
+}

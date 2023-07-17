@@ -1,0 +1,134 @@
+.modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	transition: all 450ms ease-in-out;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	.modalInnerContent {
+		max-width: 720px;
+		width: 100%;
+		background-color: #fff;
+		z-index: 2;
+		max-height: 90%;
+		display: flex;
+		flex-direction: column;
+		min-height: 50vh;
+	}
+	.modalInnerContent.s {
+		max-width: 380px;
+		min-height: 0;
+	}
+	.modalInnerContent.m {
+		max-width: 520px;
+		min-height: 30vh;
+	}
+	.modalInnerContent.l {
+		max-width: 720px;
+	}
+	.modalInnerContent.xl {
+		max-width: 850px;
+	}
+	.modalInnerContent.xxl {
+		max-width: 980px;
+	}
+	.backdropOverlay {
+		position: fixed;
+		left: 0;
+		top: 0;
+		background: rgba(0, 0, 0, 0.54);
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	.close {
+		font-size: 30px;
+		color: #16325c;
+		border: none;
+		padding: 0px 10px;
+		box-shadow: none;
+		font-weight: 400;
+		background: none;
+        cursor: pointer;
+	}
+	.modalHeader {
+		display: flex;
+		align-items: center;
+		min-height: 56px;
+		padding: 0 10px 0 20px;
+		border-bottom: 1px solid #d8dde6;
+	}
+	.modalTitle {
+		flex-grow: 1;
+		text-align: center;
+		font-size: 20px;
+		font-weight: 600;
+		color: #16325c;
+	}
+	.modalContent {
+		padding: 20px;
+		flex-grow: 1;
+		overflow-y: auto;
+		min-height: 50vh;
+	}
+	.modalFooter {
+		min-height: 55px;
+		padding: 0 20px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		border-top: 1px solid #dfe3e8;
+		box-shadow: 0px 0px 5px 0px rgba(119, 151, 178, 0.3);
+		.btn {
+			min-width: 86px;
+			margin-left: 16px;
+		}
+	}
+}
+.pageWrapperV2 {
+	.modal {
+		.close {
+			margin: inherit;
+			width: auto;
+			box-shadow: none;
+			padding: 0 10px;
+		}
+		.modalTitle {
+			font-size: 24px;
+		}
+	}
+}
+@media (max-width: 480px) {
+	.modal {
+		.modalInnerContent {
+			flex-grow: 1;
+			width: 100%;
+			max-width: none;
+			height: 100%;
+			max-height: none;
+			border-radius: 0;
+		}
+		.close {
+			top: 12px;
+			right: 15px;
+			background-color: transparent;
+		}
+		.modalFooter {
+			padding: 10px 20px;
+			justify-content: space-between;
+			.btn {
+				min-width: unset;
+				margin-left: 0px;
+				flex-grow: 1;
+			}
+			.btn.btn-primary {
+				margin-left: 10px;
+			}
+		}
+	}
+}
